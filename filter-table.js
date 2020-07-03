@@ -21,6 +21,8 @@
       table.find('tr').each(function(index) {
 
         $row = $(this);
+        // skip the headers from search
+        if ($row.find("th").length > 0) return;
         let bool = false;
 
         $row.find("td").each(function() {
